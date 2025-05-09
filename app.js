@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 3000;
 app.use(express.static(__dirname));
-const filePath = path.join(__dirname, 'theGirlOfFireAndThorns.html');
+const filePath = path.join(__dirname, 'index.html');
 const data = fs.readFileSync(filePath, 'utf-8');
 
 app.get("/", (req, res) => {
